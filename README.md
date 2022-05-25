@@ -1,4 +1,4 @@
-# How to run the JMS sample on JBoss EAP Azure App Service
+# Run JMS sample on JBoss EAP Azure App Service
 
 This JMS sample is based on https://github.com/jboss-developer/jboss-eap-quickstarts/tree/7.4.x/helloworld-mdb.
 

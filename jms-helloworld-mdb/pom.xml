@@ -68,10 +68,8 @@
     </pluginRepository> 
   </pluginRepositories>  
   <properties> 
-    <!-- Explicitly declaring the source encoding eliminates the following
-            message: -->  
-    <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered
-            resources, i.e. build is platform dependent! -->  
+    <!-- Explicitly declaring the source encoding eliminates the following message: -->  
+    <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent! -->  
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
     <!-- JBoss dependency versions -->  
     <version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>  
@@ -101,8 +99,7 @@
     </dependencies> 
   </dependencyManagement>  
   <dependencies> 
-    <!-- Import the Servlet API, we use provided scope as the API is
-            included in JBoss EAP -->  
+    <!-- Import the Servlet API, we use provided scope as the API is included in JBoss EAP -->  
     <dependency> 
       <groupId>org.jboss.spec.javax.servlet</groupId>  
       <artifactId>jboss-servlet-api_3.1_spec</artifactId>  
@@ -131,53 +128,17 @@
     </dependency> 
   </dependencies>  
   <build> 
-    <!-- Set the name of the WAR, used as the context root when the app
-            is deployed -->  
+    <!-- Set the name of the WAR, used as the context root when the app is deployed -->  
     <finalName>${project.artifactId}</finalName>  
     <plugins> 
       <plugin> 
         <artifactId>maven-war-plugin</artifactId>  
         <version>${version.war.plugin}</version>  
         <configuration> 
-          <!-- Java EE doesn't require web.xml, Maven needs to
-                        catch up! -->  
+          <!-- Java EE doesn't require web.xml, Maven needs to catch up! -->  
           <failOnMissingWebXml>false</failOnMissingWebXml> 
         </configuration> 
       </plugin>  
-      <!-- WildFly plug-in to deploy the WAR -->  
-      <plugin> 
-        <groupId>org.wildfly.plugins</groupId>  
-        <artifactId>wildfly-maven-plugin</artifactId>  
-        <version>${version.wildfly.maven.plugin}</version> 
-      </plugin>  
-      <plugin>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>azure-webapp-maven-plugin</artifactId>
-        <version>2.5.0</version>
-        <configuration>
-          <schemaVersion>v2</schemaVersion>
-          <subscriptionId>260524c9-7a4d-4483-8d85-de54f9c40ae8</subscriptionId>
-          <resourceGroup>jboss-helloworld-mdb-1653460071094-rg</resourceGroup>
-          <appName>jboss-helloworld-mdb-1653460071094</appName>
-          <pricingTier>P1v3</pricingTier>
-          <region>centralus</region>
-          <runtime>
-            <os>Linux</os>
-            <javaVersion>Java 11</javaVersion>
-            <webContainer>Jbosseap 7</webContainer>
-          </runtime>
-          <deployment>
-            <resources>
-              <resource>
-                <directory>${project.basedir}/target</directory>
-                <includes>
-                  <include>*.war</include>
-                </includes>
-              </resource>
-            </resources>
-          </deployment>
-        </configuration>
-      </plugin>
     </plugins> 
   </build> 
 </project>
