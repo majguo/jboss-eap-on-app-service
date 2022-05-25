@@ -1,12 +1,16 @@
 # How to run the JMS sample on JBoss EAP Azure App Service
 
-This JMS sample references to https://github.com/jboss-developer/jboss-eap-quickstarts/tree/7.4.x/helloworld-mdb.
+This JMS sample is based on https://github.com/jboss-developer/jboss-eap-quickstarts/tree/7.4.x/helloworld-mdb.
 
-To run sample on JBoss EAP Azure App Service, following steps below:
+You can also refer to https://github.com/RedHat-Middleware-Workshops/eap7-modernization/blob/master/exercise4-messaging.adoc for more detailed description about the sample.
+
+To better understand how message-driven bean is used for processing messages, pls refer to [Receiving Messages Asynchronously Using a Message-Driven Bean](https://docs.oracle.com/javaee/7/tutorial/jms-examples006.htm).
+
+Follow steps below to deploy and run the sample on JBoss EAP Azure App Service:
 
 1. Clone this repo in your local file system.
 1. Change directory to sample project `cd <local-clone-of-repo>/jms-helloworld-mdb`.
-1. [Configure Azure Web App Maven Plugin](https://docs.microsoft.com/azure/app-service/quickstart-java?tabs=jbosseap&pivots=platform-linux#configure-the-maven-plugin).
+1. [Configure web app using Azure Web App Maven Plugin](https://docs.microsoft.com/azure/app-service/quickstart-java?tabs=jbosseap&pivots=platform-linux#configure-the-maven-plugin).
 
    ```azure-cli
    mvn com.microsoft.azure:azure-webapp-maven-plugin:2.5.0:config
