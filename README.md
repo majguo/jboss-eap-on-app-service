@@ -1,6 +1,6 @@
-# How to run the sample on JBoss EAP Azure App Service
+# How to run the JMS sample on JBoss EAP Azure App Service
 
-This sample references to https://github.com/jboss-developer/jboss-eap-quickstarts/tree/7.4.x/helloworld-mdb.
+This JMS sample references to https://github.com/jboss-developer/jboss-eap-quickstarts/tree/7.4.x/helloworld-mdb.
 
 To run sample on JBoss EAP Azure App Service, following steps below:
 
@@ -34,19 +34,20 @@ To run sample on JBoss EAP Azure App Service, following steps below:
    mvn package azure-webapp:deploy -DskipTests
    ```
 
-   1. If you encounter the similar error message below, open `pom.xml` and change `region` or `pricingTier` accordingly. 
-      ```text
-      This region has quota of 0 PremiumV3 instances for your subscription. Try selecting different region or SKU.
-      ```
-      Re-deploy the sample app until no erros observed.
+   If you encounter the similar error message below, open `pom.xml` and change `region` or `pricingTier` accordingly. 
+   ```text
+   This region has quota of 0 PremiumV3 instances for your subscription. Try selecting different region or SKU.
+   ```
+   Re-deploy the sample app until no erros observed.
 
-   1. Once the app is successfully deployed, you should see the endpoint of web app output in the command prompt.
-      ```text
-      Successfully deployed the artifact to https://jboss-helloworld-mdb-<random-id>.azurewebsites.net
-      ```
-    1. Copy the endpoint URL and open it in the browser, you should see the similar UI as below:
+   Once the app is successfully deployed, you should see the endpoint of web app output in the command prompt.
+   ```text
+   Successfully deployed the artifact to https://jboss-helloworld-mdb-<random-id>.azurewebsites.net
+   ```
+   
+   Copy the endpoint URL and open it in the browser, you should see the similar UI as below:
 
-       ![helloworld-mdb-ui](./media/helloworld-mdb-ui.png)
+   ![helloworld-mdb-ui](./media/helloworld-mdb-ui.png)
 
 1. Inspect JBoss EAP server log to see the result of messages processing.
    1. Sign in to [Azure portal](http://portal.azure.com).
