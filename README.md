@@ -59,7 +59,7 @@ Follow steps below to deploy and run the sample on JBoss EAP Azure App Service:
    1. Open the App Service with the value of `AppName` you logged down before.
    1. Open **SSH** page under **Development Tools**. Click **Go** to open a new browser tab for **webssh**.
       1. The path of application log file looks like `LogFiles/Application/server.<random-id>.log`. Replace placeholder `<random-id>` with the real one.
-      1. Run `tail -f <path-of-application-log-file> -n 100` to monitor messags processing.
+      1. Run `tail -f <path-of-application-log-file> -n 100` to monitor messages processing.
       1. Switch to the UI page of sample app you opened before. Refresh the page.
       1. Swtich back to **webssh** page. You should see the similar messages output.
          ```
