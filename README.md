@@ -71,3 +71,7 @@ Follow steps below to deploy and run the sample on JBoss EAP Azure App Service:
          ```
 
 1. In the preceding steps, you created Azure resources in a resource group. If you don't need the resources in the future, delete the resource group from portal.
+
+## References
+
+There is a good reference [JBoss EAP on App Service demo](https://github.com/Azure-Samples/jboss-on-app-service) which can help you get started with Jboss EAP on App Service.
