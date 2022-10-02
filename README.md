@@ -75,3 +75,17 @@ Follow steps below to deploy and run the sample on JBoss EAP Azure App Service:
 ## References
 
 There is a good reference [JBoss EAP on App Service demo](https://github.com/Azure-Samples/jboss-on-app-service) which can help you get started with Jboss EAP on App Service.
+
+### helloworld-jms
+
+The [`helloworld-jms`](./helloworld-jms/README.md) quickstart demonstrates the use of external JMS clients with Red Hat JBoss Enterprise Application Platform. It contains the following:
+
+* A message producer that sends messages to a JMS destination deployed to a JBoss EAP server.
+* A message consumer that receives message from a JMS destination deployed to a JBoss EAP server.
+
+The sample references from the existing project `helloworld-jms: Helloworld JMS Example`, you can find it from either of the URLs below:
+
+* https://github.com/RedHat-Middleware-Workshops/eap7-modernization/tree/master/projects/04_messaging/helloworld-jms
+* https://github.com/jboss-developer/jboss-eap-quickstarts/tree/7.4.x/helloworld-jms
+
+Again, you can also refer to https://github.com/RedHat-Middleware-Workshops/eap7-modernization/blob/master/exercise4-messaging.adoc for more detailed description about the sample.
